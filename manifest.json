@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Eclipse",
+  "version": "1.0",
+  "description": "Applies a dark theme to websites.",
+  "icons": {
+    "128": "icons/icon-light.png"
+  },
+  "permissions": ["scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["dark.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

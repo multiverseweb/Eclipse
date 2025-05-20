@@ -1,0 +1,37 @@
+/*-------------------------------------------+
+|       Copyright (c) 2025 Tejas Gupta       |
+|           All rights reserved.             |
+--------------------------------------------*/
+
+html, body {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+* {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+a {
+  color: #5099de !important;
+}
+
+img, video, canvas {
+  filter: brightness(0.8) contrast(1.1) !important;
+}
+
+::selection {
+  background: #555 !important;
+  color: #fff !important;
+}
+
+input, textarea, select, button {
+  background-color: #1e1e1e !important;
+  color: #eee !important;
+}
+
+code, pre {
+  background-color: #1e1e1e !important;
+  color: #c792ea !important;
+}
