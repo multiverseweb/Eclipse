@@ -2,7 +2,7 @@
 ---
 ### Installation Guide
 
-- [Click here](Eclipse.zip) to download the `Eclipse.zip`.
+- [Click here](https://github.com/multiverseweb/Eclipse/raw/refs/heads/main/Eclipse.zip) to download the `Eclipse.zip`.
 Or 
 Clone this repository using Git: 
 ```
