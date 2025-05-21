@@ -1,4 +1,4 @@
-# <img src="icons/icon-dark.png" height="30px"> Eclipse
+# <img src="icons/icon-light.png" height="30px"> Eclipse
 ---
 ### Installation Guide
 
