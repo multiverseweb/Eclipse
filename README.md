@@ -1,4 +1,4 @@
-# <img src="icons/icon-light.png" height="30px"> Eclipse
+# <img src="https://raw.githubusercontent.com/multiverseweb/Eclipse/main/icons/Eclipse.png" height="30px"> Eclipse
 ---
 ### Installation Guide
 
