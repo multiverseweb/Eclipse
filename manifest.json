@@ -4,7 +4,7 @@
   "version": "1.0",
   "description": "Applies a dark theme to websites.",
   "icons": {
-    "128": "icons/icon-light.png"
+    "128": "icons/Eclipse.png"
   },
   "permissions": ["scripting"],
   "content_scripts": [
