@@ -17,7 +17,7 @@ git clone https://github.com/multiverseweb/Eclipse.git
 
 - Click "Load Unpacked".
 
-![](images/extensions.png)
+![](https://raw.githubusercontent.com/multiverseweb/Eclipse/refs/heads/main/images/extensions.png)
 
 Select the folder **`Eclipse`** where you unzipped the extension.
 
@@ -25,4 +25,4 @@ Select the folder **`Eclipse`** where you unzipped the extension.
 
 |Before|After|
 |:---:|:---:|
-| ![](images/before.png) | ![](images/after.png) |
+| ![](https://raw.githubusercontent.com/multiverseweb/Eclipse/refs/heads/main/images/before.png) | ![](https://raw.githubusercontent.com/multiverseweb/Eclipse/refs/heads/main/images/after.png) |
