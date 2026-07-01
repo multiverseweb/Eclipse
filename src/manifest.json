@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Eclipse",
+  "version": "1.0",
+  "description": "Applies a dark theme to websites.",
+  "icons": {
+    "128": "icons/Eclipse.png"
+  },
+  "permissions": ["scripting", "storage", "sidePanel"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["dark.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["themes.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

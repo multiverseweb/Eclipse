@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eclipse - Night Mode Extension</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+  
+  <div class="container neu-flat">
+    <header class="header">
+      <div class="logo-wrapper neu-pressed">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </div>
+      <h1>Eclipse</h1>
+      <p>A beautiful, customizable night mode extension for your browser.</p>
+    </header>
+
+    <div class="content-wrapper">
+      <div class="preview-section neu-pressed" id="preview-box">
+        <h3>Live Preview</h3>
+        <p>This is how a standard paragraph looks when the theme is applied.</p>
+        <a href="#">This is a sample link</a>
+        
+        <table class="preview-table">
+          <thead>
+            <tr><th>Feature</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Custom Themes</td><td>Supported</td></tr>
+            <tr><td>Custom CSS</td><td>Supported</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="controls-section neu-flat">
+        <h3>Select Theme</h3>
+        <div id="theme-buttons" class="theme-buttons">
+          <!-- Buttons injected by JS -->
+        </div>
+      </div>
+    </div>
+
+    <div class="instructions neu-flat">
+      <h2>Installation Guide</h2>
+      <ol class="steps-list">
+        <li>Download <a href="https://github.com/multiverseweb/Eclipse/raw/refs/heads/main/Eclipse.zip" class="download-link">Eclipse.zip</a> and extract it.</li>
+        <li>Go to <code>chrome://extensions/</code> in your browser and enable <strong>Developer mode</strong>.</li>
+        <li>Click <strong>Load unpacked</strong> and select the extracted <code>src</code> folder.</li>
+      </ol>
+      <div class="actions">
+        <a href="https://github.com/multiverseweb/Eclipse/raw/refs/heads/main/Eclipse.zip" class="neu-btn primary-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          Download ZIP
+        </a>
+        <a href="https://github.com/multiverseweb/Eclipse" class="neu-btn" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+          Contribute
+        </a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>&lt;/&gt; by <a href="https://github.com/multiverseweb" target="_blank">Tejas Gupta</a></p>
+      <p class="copyright">Copyright &copy; <span id="year"></span>. Released under the MIT License.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

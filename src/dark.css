@@ -1,0 +1,61 @@
+/*-------------------------------------------+
+|       Copyright (c) 2025 Tejas Gupta       |
+|           All rights reserved.             |
+--------------------------------------------*/
+
+html, body {
+  background-color: var(--eclipse-bg, #121212) !important;
+  color: var(--eclipse-text, #e0e0e0) !important;
+}
+
+/* Remove drop shadows globally */
+* {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* Ensure divs and layout containers have a solid dark background instead of transparent */
+div, section, article, header, footer, nav, main, aside, table, th, td, tr, thead, tbody {
+  background-color: var(--eclipse-bg, #121212) !important;
+  color: var(--eclipse-text, #e0e0e0) !important;
+}
+
+/* Inline/text elements can stay transparent */
+span, p, h1, h2, h3, h4, h5, h6, ul, ol, li {
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+a {
+  color: var(--eclipse-link, #5099de) !important;
+}
+
+img, video, canvas, picture {
+  filter: brightness(0.8) contrast(1.1) !important;
+}
+
+::selection {
+  background: var(--eclipse-link, #555) !important;
+  color: var(--eclipse-bg, #fff) !important;
+}
+
+input, textarea, select, button {
+  background-color: var(--eclipse-accent, #1e1e1e) !important;
+  color: var(--eclipse-text, #eee) !important;
+  border: 1px solid var(--eclipse-accent, #444) !important;
+}
+
+code, pre {
+  background-color: var(--eclipse-accent, #1e1e1e) !important;
+  color: var(--eclipse-text, #c792ea) !important;
+  border: 1px solid var(--eclipse-accent, #444) !important;
+}
+
+svg {
+  fill: currentColor;
+}
+
+/* Google Sheets canvas dark mode */
+.eclipse-is-docs canvas {
+  filter: invert(0.9) hue-rotate(180deg) brightness(1.2) !important;
+}

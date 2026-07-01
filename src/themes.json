@@ -1,0 +1,7 @@
+{
+  "default": { "name": "Default Dark", "bg": "#121212", "text": "#e0e0e0", "link": "#5099de", "accent": "#1e1e1e" },
+  "oled": { "name": "OLED Black", "bg": "#000000", "text": "#e0e0e0", "link": "#4da6ff", "accent": "#111111" },
+  "sepia": { "name": "Sepia", "bg": "#f4ecd8", "text": "#433422", "link": "#d85600", "accent": "#e6dcc3" },
+  "tokyonight": { "name": "Tokyo Night", "bg": "#1a1b26", "text": "#c0caf5", "link": "#7aa2f7", "accent": "#414868" },
+  "github": { "name": "GitHub Dark", "bg": "#0d1117", "text": "#c9d1d9", "link": "#58a6ff", "accent": "#21262d" }
+}
