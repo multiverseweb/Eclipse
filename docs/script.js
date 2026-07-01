@@ -1,8 +1,8 @@
 const themeButtonsContainer = document.getElementById('theme-buttons');
 const root = document.documentElement;
 
-// Fetch themes from the root of the repository
-fetch('/src/themes.json')
+// Fetch themes from the repository
+fetch('https://raw.githubusercontent.com/multiverseweb/Eclipse/main/src/themes.json')
   .then(response => response.json())
   .then(themes => {
     let first = true;
