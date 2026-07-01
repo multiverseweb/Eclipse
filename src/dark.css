@@ -98,3 +98,31 @@ html:not([data-eclipse="off"]).eclipse-is-docs .grid-bottom-bar,
 html:not([data-eclipse="off"]).eclipse-is-docs .grid-bottom-bar div {
   background-color: transparent !important;
 }
+
+/* Pinterest specific fixes */
+html:not([data-eclipse="off"]).eclipse-is-pinterest div,
+html:not([data-eclipse="off"]).eclipse-is-pinterest section,
+html:not([data-eclipse="off"]).eclipse-is-pinterest main,
+html:not([data-eclipse="off"]).eclipse-is-pinterest article,
+html:not([data-eclipse="off"]).eclipse-is-pinterest aside {
+  background-color: transparent !important;
+}
+
+html:not([data-eclipse="off"]).eclipse-is-pinterest body,
+html:not([data-eclipse="off"]).eclipse-is-pinterest [data-test-id="header"],
+html:not([data-eclipse="off"]).eclipse-is-pinterest [role="dialog"],
+html:not([data-eclipse="off"]).eclipse-is-pinterest [role="menu"],
+html:not([data-eclipse="off"]).eclipse-is-pinterest .gestalt-sheet,
+html:not([data-eclipse="off"]).eclipse-is-pinterest [data-test-id="gestalt-popover"],
+html:not([data-eclipse="off"]).eclipse-is-pinterest [data-test-id="search-box-container"],
+html:not([data-eclipse="off"]).eclipse-is-pinterest [data-test-id="lego-dialog"] {
+  background-color: var(--eclipse-bg, #121212) !important;
+}
+
+html:not([data-eclipse="off"]).eclipse-is-pinterest a {
+  color: var(--eclipse-text, #e0e0e0) !important;
+}
+
+html:not([data-eclipse="off"]).eclipse-is-pinterest a:hover {
+  color: var(--eclipse-link, #5099de) !important;
+}

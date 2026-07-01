@@ -29,9 +29,11 @@ function applyTheme(theme) {
   styleEl.textContent = cssVars;
 }
 
-// Add domain specific class for targeted CSS (e.g. Google Sheets)
+// Add domain specific class for targeted CSS (e.g. Google Sheets, Pinterest)
 if (window.location.hostname.includes('docs.google.com')) {
   document.documentElement.classList.add('eclipse-is-docs');
+} else if (window.location.hostname.includes('pinterest.')) {
+  document.documentElement.classList.add('eclipse-is-pinterest');
 }
 
 function applyCustomCss(css) {
