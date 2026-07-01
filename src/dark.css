@@ -14,8 +14,16 @@ html, body {
   text-shadow: none !important;
 }
 
-/* Ensure divs and layout containers have a solid dark background instead of transparent */
-div, section, article, header, footer, nav, main, aside, table, th, td, tr, thead, tbody {
+/* Ensure divs and layout containers have a solid dark background instead of transparent, except on Google Docs/Sheets to prevent covering the canvas */
+html:not(.eclipse-is-docs) div, 
+html:not(.eclipse-is-docs) section, 
+html:not(.eclipse-is-docs) article, 
+html:not(.eclipse-is-docs) header, 
+html:not(.eclipse-is-docs) footer, 
+html:not(.eclipse-is-docs) nav, 
+html:not(.eclipse-is-docs) main, 
+html:not(.eclipse-is-docs) aside, 
+table, th, td, tr, thead, tbody {
   background-color: var(--eclipse-bg, #121212) !important;
   color: var(--eclipse-text, #e0e0e0) !important;
 }

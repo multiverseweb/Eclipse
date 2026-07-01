@@ -42,5 +42,3 @@ Core logic is located at:
 - `src/content.js`: Handles fetching and applying CSS variables.
 - `src/sidepanel.js`: Handles UI logic for the extension menu.
 - `docs/`: Contains the landing page.
-
-Ensure you use clear, concise commit messages. Do not use emojis in your code or documentation.
