@@ -46,7 +46,14 @@ function applyCustomCss(css) {
 
 // Initial load
 function loadTheme() {
-  chrome.storage.local.get(['eclipseTheme', 'eclipseCustomColors', 'eclipseCustomCss'], (result) => {
+  chrome.storage.local.get(['eclipseEnabled', 'eclipseTheme', 'eclipseCustomColors', 'eclipseCustomCss'], (result) => {
+    
+    if (result.eclipseEnabled === false) {
+      document.documentElement.setAttribute('data-eclipse', 'off');
+    } else {
+      document.documentElement.removeAttribute('data-eclipse');
+    }
+
     const selectedTheme = result.eclipseTheme || 'default';
     if (selectedTheme === 'custom' && result.eclipseCustomColors) {
       applyTheme(result.eclipseCustomColors);
@@ -63,7 +70,7 @@ function loadTheme() {
 // Listen for updates from the side panel
 chrome.storage.onChanged.addListener((changes, namespace) => {
   if (namespace === 'local') {
-    if (changes.eclipseTheme || changes.eclipseCustomColors || changes.eclipseCustomCss) {
+    if (changes.eclipseEnabled || changes.eclipseTheme || changes.eclipseCustomColors || changes.eclipseCustomCss) {
       loadTheme();
     }
   }

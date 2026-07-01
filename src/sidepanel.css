@@ -35,7 +35,7 @@ body {
 .container {
   position: relative;
   z-index: 1;
-  padding: 24px 16px;
+  padding: 24px 16px 80px 16px;
 }
 
 /* Neumorphism Styles */
@@ -53,10 +53,51 @@ body {
 
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 16px;
   padding: 16px;
   margin-bottom: 24px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Power Toggle Switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 24px;
+  transition: 0.3s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #555;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+input:checked + .slider:before {
+  transform: translateX(20px);
+  background-color: #5099de;
 }
 
 .logo-wrapper {
@@ -150,9 +191,30 @@ textarea::placeholder {
 }
 
 .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  border-top: 1px solid #222;
   text-align: center;
-  margin-top: 24px;
+  padding: 12px 0;
   font-size: 13px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.footer-links {
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.footer-links span {
+  margin: 0 4px;
+}
+
+.footer-credit {
+  font-size: 12px;
 }
 
 .footer a {

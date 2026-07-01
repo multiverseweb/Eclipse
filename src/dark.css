@@ -3,67 +3,98 @@
 |           All rights reserved.             |
 --------------------------------------------*/
 
-html, body {
+html:not([data-eclipse="off"]), 
+html:not([data-eclipse="off"]) body {
   background-color: var(--eclipse-bg, #121212) !important;
   color: var(--eclipse-text, #e0e0e0) !important;
 }
 
 /* Remove drop shadows globally */
-* {
+html:not([data-eclipse="off"]) * {
   box-shadow: none !important;
   text-shadow: none !important;
 }
 
-/* Ensure divs and layout containers have a solid dark background instead of transparent, except on Google Docs/Sheets to prevent covering the canvas */
-html:not(.eclipse-is-docs) div, 
-html:not(.eclipse-is-docs) section, 
-html:not(.eclipse-is-docs) article, 
-html:not(.eclipse-is-docs) header, 
-html:not(.eclipse-is-docs) footer, 
-html:not(.eclipse-is-docs) nav, 
-html:not(.eclipse-is-docs) main, 
-html:not(.eclipse-is-docs) aside, 
-table, th, td, tr, thead, tbody {
+/* Ensure divs and layout containers have a solid dark background instead of transparent */
+html:not([data-eclipse="off"]) div, 
+html:not([data-eclipse="off"]) section, 
+html:not([data-eclipse="off"]) article, 
+html:not([data-eclipse="off"]) header, 
+html:not([data-eclipse="off"]) footer, 
+html:not([data-eclipse="off"]) nav, 
+html:not([data-eclipse="off"]) main, 
+html:not([data-eclipse="off"]) aside, 
+html:not([data-eclipse="off"]) table, 
+html:not([data-eclipse="off"]) th, 
+html:not([data-eclipse="off"]) td, 
+html:not([data-eclipse="off"]) tr, 
+html:not([data-eclipse="off"]) thead, 
+html:not([data-eclipse="off"]) tbody {
   background-color: var(--eclipse-bg, #121212) !important;
   color: var(--eclipse-text, #e0e0e0) !important;
 }
 
 /* Inline/text elements can stay transparent */
-span, p, h1, h2, h3, h4, h5, h6, ul, ol, li {
+html:not([data-eclipse="off"]) span, 
+html:not([data-eclipse="off"]) p, 
+html:not([data-eclipse="off"]) h1, 
+html:not([data-eclipse="off"]) h2, 
+html:not([data-eclipse="off"]) h3, 
+html:not([data-eclipse="off"]) h4, 
+html:not([data-eclipse="off"]) h5, 
+html:not([data-eclipse="off"]) h6, 
+html:not([data-eclipse="off"]) ul, 
+html:not([data-eclipse="off"]) ol, 
+html:not([data-eclipse="off"]) li {
   background-color: transparent !important;
   color: inherit !important;
 }
 
-a {
+html:not([data-eclipse="off"]) a {
   color: var(--eclipse-link, #5099de) !important;
 }
 
-img, video, canvas, picture {
+html:not([data-eclipse="off"]) img, 
+html:not([data-eclipse="off"]) video, 
+html:not([data-eclipse="off"]) canvas, 
+html:not([data-eclipse="off"]) picture {
   filter: brightness(0.8) contrast(1.1) !important;
 }
 
-::selection {
+html:not([data-eclipse="off"]) ::selection {
   background: var(--eclipse-link, #555) !important;
   color: var(--eclipse-bg, #fff) !important;
 }
 
-input, textarea, select, button {
+html:not([data-eclipse="off"]) input, 
+html:not([data-eclipse="off"]) textarea, 
+html:not([data-eclipse="off"]) select, 
+html:not([data-eclipse="off"]) button {
   background-color: var(--eclipse-accent, #1e1e1e) !important;
   color: var(--eclipse-text, #eee) !important;
   border: 1px solid var(--eclipse-accent, #444) !important;
 }
 
-code, pre {
+html:not([data-eclipse="off"]) code, 
+html:not([data-eclipse="off"]) pre {
   background-color: var(--eclipse-accent, #1e1e1e) !important;
   color: var(--eclipse-text, #c792ea) !important;
   border: 1px solid var(--eclipse-accent, #444) !important;
 }
 
-svg {
+html:not([data-eclipse="off"]) svg {
   fill: currentColor;
 }
 
 /* Google Sheets canvas dark mode */
-.eclipse-is-docs canvas {
+html:not([data-eclipse="off"]).eclipse-is-docs canvas {
   filter: invert(0.9) hue-rotate(180deg) brightness(1.2) !important;
+}
+
+/* Prevent Google Sheets grid overlay divs from covering the canvas */
+html:not([data-eclipse="off"]).eclipse-is-docs #waffle-grid-container,
+html:not([data-eclipse="off"]).eclipse-is-docs #waffle-grid-container div,
+html:not([data-eclipse="off"]).eclipse-is-docs .grid-bottom-bar,
+html:not([data-eclipse="off"]).eclipse-is-docs .grid-bottom-bar div {
+  background-color: transparent !important;
 }

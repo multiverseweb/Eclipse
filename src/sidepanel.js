@@ -5,13 +5,19 @@ const saveCustomBtn = document.getElementById('save-custom');
 const customCssTextarea = document.getElementById('custom-css');
 const saveCssBtn = document.getElementById('save-css');
 
+const powerToggle = document.getElementById('power-toggle');
+
 const colorBg = document.getElementById('color-bg');
 const colorText = document.getElementById('color-text');
 const colorLink = document.getElementById('color-link');
 const colorAccent = document.getElementById('color-accent');
 
 function loadPreferences() {
-  chrome.storage.local.get(['eclipseTheme', 'eclipseCustomColors', 'eclipseCustomCss'], (result) => {
+  chrome.storage.local.get(['eclipseEnabled', 'eclipseTheme', 'eclipseCustomColors', 'eclipseCustomCss'], (result) => {
+    if (result.eclipseEnabled !== undefined) {
+      powerToggle.checked = result.eclipseEnabled;
+    }
+    
     if (result.eclipseTheme) {
       themeSelect.value = result.eclipseTheme;
       if (result.eclipseTheme === 'custom') {
@@ -61,6 +67,10 @@ themeSelect.addEventListener('change', (e) => {
   } else {
     customColorsDiv.classList.add('hidden');
   }
+});
+
+powerToggle.addEventListener('change', (e) => {
+  chrome.storage.local.set({ eclipseEnabled: e.target.checked });
 });
 
 saveCustomBtn.addEventListener('click', () => {
