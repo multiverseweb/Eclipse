@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/multiverseweb/Eclipse/main/src/icons/eclipse.png" height="30px"> Eclipse
+# <img src="https://raw.githubusercontent.com/multiverseweb/Eclipse/main/src/icons/eclipse.png" height="30px" id="project-logo"> Eclipse
 
 A customizable night mode extension for your browser that applies a dark theme, supports multiple palettes, custom CSS and integrates with web apps like Google Sheets.
 
